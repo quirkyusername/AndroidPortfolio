@@ -15,18 +15,77 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView" />
+        android:text="My NanoDegree Apps!"
+        android:id="@+id/textView"
+        android:layout_marginLeft="30dp"
+        android:textSize="30sp" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="App 1"
-        android:id="@+id/btnApp1"
+        android:text="@string/app1"
+        android:id="@+id/btnSpotifyStreamer"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="30dp"
         style="@style/AppTheme"
-        android:background="#e4d801" />
+        android:background="#83c8f7"
+        android:textSize="20sp"/>
+
+    <Button
+        style="@style/AppTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app2"
+        android:id="@+id/btnFootballScoresApp"
+        android:layout_below="@+id/btnSpotifyStreamer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#77c4f8"
+        android:textSize="20sp" />
+    <Button
+        style="@style/AppTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app3"
+        android:id="@+id/btnLibraryApp"
+        android:layout_below="@+id/btnFootballScoresApp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#77c4f8"
+        android:textSize="20sp" />
+    <Button
+        style="@style/AppTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app4"
+        android:id="@+id/btnBuildItBigger"
+        android:layout_below="@+id/btnLibraryApp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#61bbf7"
+        android:textSize="20sp" />
+    <Button
+        style="@style/AppTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app5"
+        android:id="@+id/btnXYZReader"
+        android:layout_below="@+id/btnBuildItBigger"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#4fb0f2"
+        android:textSize="20sp" />
+    <Button
+        style="@style/AppTheme"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app6"
+        android:id="@+id/btnCapstone"
+        android:layout_below="@+id/btnXYZReader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#e7a7d2"
+        android:textSize="20sp" />
 
 </RelativeLayout>

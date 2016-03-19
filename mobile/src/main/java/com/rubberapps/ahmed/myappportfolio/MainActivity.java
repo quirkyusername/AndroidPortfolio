@@ -1,5 +1,6 @@
 package com.rubberapps.ahmed.myappportfolio;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -11,7 +12,16 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,21 +29,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        Button app1 = (Button) findViewById(R.id.btnApp1);
-        app1.setOnClickListener(this);
-
+        //Create buttons and their click listeners that will later launch my different apps
+        Button btnSpotifyStreamer = (Button) findViewById(R.id.btnSpotifyStreamer);
+        if (btnSpotifyStreamer != null) btnSpotifyStreamer.setOnClickListener(this);
+        Button btnFootballScoresApp = (Button) findViewById(R.id.btnFootballScoresApp);
+        if (btnFootballScoresApp != null) btnFootballScoresApp.setOnClickListener(this);
+        Button btnLibraryApp = (Button) findViewById(R.id.btnLibraryApp);
+        if (btnLibraryApp != null) btnLibraryApp.setOnClickListener(this);
+        Button btnBuildItBigger = (Button) findViewById(R.id.btnBuildItBigger);
+        if (btnBuildItBigger != null) btnBuildItBigger.setOnClickListener(this);
+        Button btnXYZReader = (Button) findViewById(R.id.btnXYZReader);
+        if (btnXYZReader != null) btnXYZReader.setOnClickListener(this);
+        Button btnCapstone = (Button) findViewById(R.id.btnCapstone);
+        if (btnCapstone != null) btnCapstone.setOnClickListener(this);
     }
+
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btnApp1:
-                Toast.makeText(MainActivity.this,R.string.first_app, Toast.LENGTH_SHORT).show();
+        String staticMessage = "This button will launch my ";
+        //handle the button presses and display a toast for the moment as to what app they will lunch in the future
+        switch (v.getId()) {
+            case R.id.btnSpotifyStreamer:
+                Toast.makeText(MainActivity.this, staticMessage + getString(R.string.app1), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnFootballScoresApp:
+                Toast.makeText(MainActivity.this, staticMessage + getString(R.string.app2), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnLibraryApp:
+                Toast.makeText(MainActivity.this, staticMessage + getString(R.string.app3), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnBuildItBigger:
+                Toast.makeText(MainActivity.this, staticMessage + getString(R.string.app4), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnXYZReader:
+                Toast.makeText(MainActivity.this, staticMessage + getString(R.string.app5), Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnCapstone:
+                Toast.makeText(MainActivity.this, staticMessage + getString(R.string.app6), Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
         }
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -55,6 +93,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }
